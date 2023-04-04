@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
         android:onClick="text_clicked"
-        android:text="lets do it"
+        android:text="starter of the project"
         android:textColor="#A33434"
         android:textSize="30dp" />
 
