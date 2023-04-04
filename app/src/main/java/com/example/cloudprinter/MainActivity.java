@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void text_clicked(View view) {
-        Toast.makeText(this, "an activity starter hi iam mesh", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "an activity starter", Toast.LENGTH_SHORT).show();
 
     }
 }
