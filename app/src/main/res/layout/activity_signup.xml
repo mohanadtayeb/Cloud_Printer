@@ -31,7 +31,6 @@
         android:text="username"
         android:textColor="#676363"
         android:textSize="15dp"
-        android:
         android:background="@color/white"
         />
 
@@ -44,7 +43,6 @@
         android:text="Email"
         android:textColor="#676363"
         android:textSize="15dp"
-        android:
         android:background="@color/white"
         />
 
@@ -58,7 +56,6 @@
         android:text="password"
         android:textColor="#676363"
         android:textSize="15dp"
-        android:
         android:background="@color/white"
         />
 
@@ -83,7 +80,7 @@
 
 
     <Button
-        android:id="@+id/sing_up_button"
+        android:id="@+id/sing_up_button_ph"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

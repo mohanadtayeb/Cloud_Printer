@@ -31,7 +31,6 @@
         android:text="username"
         android:textColor="#676363"
         android:textSize="15dp"
-        android:
         android:background="@color/white"
         />
 
@@ -44,7 +43,6 @@
         android:text="password"
         android:textColor="#676363"
         android:textSize="15dp"
-        android:
         android:background="@color/white"
         />
     <CheckBox
