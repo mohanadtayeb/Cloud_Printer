@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BCBCBC"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".login">
+
+
+
+    <TextView
+        android:id="@+id/login_heder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="135dp"
+        android:text="Login"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/login_username"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="username"
+        android:textColor="#676363"
+        android:textSize="15dp"
+        android:
+        android:background="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="password"
+        android:textColor="#676363"
+        android:textSize="15dp"
+        android:
+        android:background="@color/white"
+        />
+    <CheckBox
+        android:id="@+id/login_pass_Remember_chekbox"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="90dp"
+        android:background="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/login_pass_Remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Remember my password"
+        android:textColor="#919090"
+        android:textSize="15dp"
+        />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="login"
+/>
+
+    <TextView
+        android:id="@+id/login_noAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="don’t have an Account ? sign up"
+        android:textColorLink="@color/purple_700"
+
+
+
+
+
+
+
+
+</LinearLayout>
