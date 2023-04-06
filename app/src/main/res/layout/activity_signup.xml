@@ -8,15 +8,30 @@
     android:padding="16dp"
     tools:context=".login">
 
-    <Button
-        android:id="@+id/location_button"
-        android:layout_width="290dp"
+
+    <TextView
+        android:id="@+id/sing_up_heder"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="select your house printing location"
-        android:textSize="11sp" />
+        android:text="Sign Up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
+    <EditText
+        android:id="@+id/sing_up_Email"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/edittext_round"
+        android:hint="  Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#676363" />
 
     <EditText
         android:id="@+id/sing_up_password"
@@ -30,16 +45,7 @@
         android:textColor="#676363" />
 
 
-    <EditText
-        android:id="@+id/sing_up_Email"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/edittext_round"
-        android:hint="  Email"
-        android:inputType="textEmailAddress"
-        android:textColor="#676363" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,18 +71,14 @@
             android:textColor="#919090" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/sing_up_heder"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/location_button"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="Sign Up"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#000000"
-        android:textSize="50dp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
+        android:text="select your house printing location"
+        android:textSize="11sp" />
 
     <Button
         android:id="@+id/sign_up_button"
