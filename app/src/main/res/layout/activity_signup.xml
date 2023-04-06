@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BCBCBC"
+    android:background="@drawable/gradient_background"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".login">
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edittext_round"
         android:hint="  Email"
         android:inputType="textEmailAddress"
@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edittext_round"
         android:hint="  password"
         android:inputType="textPassword"
@@ -55,8 +55,8 @@
 
         <CheckBox
             android:id="@+id/owner_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             android:layout_marginTop="3dp"
             android:background="@color/white"
             android:onClick="owner_checkbox_clicked" />
@@ -68,7 +68,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="3dp"
             android:text="I’m a house printing owner"
-            android:textColor="#919090" />
+            android:textColor="#595959" />
     </LinearLayout>
 
     <Button
@@ -78,6 +78,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:text="select your house printing location"
+        android:backgroundTint="@color/teal_200"
         android:textSize="11sp" />
 
     <Button
@@ -87,6 +88,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:onClick="signup_clicked"
+        android:backgroundTint="@color/teal_200"
         android:text="Register" />
 
 

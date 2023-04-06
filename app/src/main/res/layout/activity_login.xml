@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BCBCBC"
+    android:background="@drawable/gradient_background"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".login">
@@ -52,9 +52,10 @@
 
         <CheckBox
             android:id="@+id/login_pass_Remember_chekbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="#FFFFFF"
+            android:buttonTint="@color/black"
             android:layout_marginTop="3dp"
 
             />
@@ -78,6 +79,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:onClick="button_clicked"
+        android:backgroundTint="@color/teal_200"
         android:text="login" />
 
     <TextView
@@ -86,9 +88,9 @@
         android:layout_height="48sp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="don’t have an Account ? sign up"
         android:onClick="signup_clicked"
-        android:textColor="@color/teal_700" />
+        android:text="don’t have an Account ? sign up"
+        android:textColor="@color/teal_200" />
 
 
 </LinearLayout>
