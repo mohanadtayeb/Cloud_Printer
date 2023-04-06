@@ -9,7 +9,6 @@
     tools:context=".login">
 
 
-
     <Button
         android:id="@+id/location_button"
         android:layout_width="290dp"
@@ -18,6 +17,19 @@
         android:layout_marginTop="50dp"
         android:text="select your house printing location"
         android:textSize="11sp" />
+
+
+    <EditText
+        android:id="@+id/sing_up_Email"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/edittext_round"
+        android:hint="  Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#676363"
+        android:textSize="15dp" />
 
     <Button
         android:id="@+id/sign_up_button"
@@ -35,17 +47,15 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@drawable/edittext_round"
-        android:textColor="#676363"
-        android:textSize="15dp"
         android:hint="  password"
-        android:inputType="textPassword" />
-
-
+        android:inputType="textPassword"
+        android:textColor="#676363"
+        android:textSize="15dp" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
 
         <CheckBox
@@ -68,19 +78,6 @@
     </LinearLayout>
 
 
-    <EditText
-        android:id="@+id/sing_up_Email"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/edittext_round"
-        android:hint="  Email"
-        android:inputType="textEmailAddress"
-        android:textColor="#676363"
-        android:textSize="15dp" />
-
-
     <TextView
         android:id="@+id/sing_up_heder"
         android:layout_width="wrap_content"
@@ -92,5 +89,4 @@
         android:textColor="#000000"
         android:textSize="50dp"
         android:textStyle="bold" />
-
 </LinearLayout>
