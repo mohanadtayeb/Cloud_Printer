@@ -10,24 +10,10 @@
 
 
 
-    <TextView
-        android:id="@+id/login_heder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="135dp"
-        android:text="Login"
-        android:textColor="#000000"
-        android:textSize="50dp"
-        android:textStyle="bold" />
-
-
-
-
     <EditText
         android:id="@+id/login_email"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:background="@drawable/edittext_round"
@@ -38,14 +24,15 @@
 
     <EditText
         android:id="@+id/login_password"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:background="@drawable/edittext_round"
         android:textColor="#676363"
         android:hint="  password"
         android:textSize="15sp" />
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -56,8 +43,8 @@
 
         <CheckBox
             android:id="@+id/login_pass_Remember_chekbox"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@color/white"
             android:layout_marginTop="3dp"
 
@@ -69,10 +56,20 @@
             android:layout_height="wrap_content"
             android:text="Remember my password"
             android:textColor="#919090"
-            android:textSize="15sp"
             android:layout_marginLeft="10dp" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/login_heder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:text="Login"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/login_button"
@@ -86,9 +83,9 @@
     <TextView
         android:id="@+id/login_noAccount"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48sp"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:text="don’t have an Account ? sign up"
         android:onClick="signup_clicked"
         android:textColor="@color/teal_700" />

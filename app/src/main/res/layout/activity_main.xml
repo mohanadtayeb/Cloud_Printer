@@ -9,7 +9,6 @@
     tools:context=".MainActivity">
 
 
-
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -21,7 +20,17 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:onClick="text_clicked"
+        android:text="Cloud Printer"
+        android:textColor="#A33434"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:onClick="text_clicked"
@@ -29,16 +38,6 @@
         android:textColor="#A33434"
         android:textSize="20sp" />
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:onClick="text_clicked"
-        android:text="Cloud Printer"
-        android:textColor="#A33434"
-        android:textSize="30dp" />
 
     <Button
         android:layout_width="wrap_content"
