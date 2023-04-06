@@ -19,50 +19,7 @@
         android:text="Login"
         android:textColor="#000000"
         android:textSize="50dp"
-        android:textStyle="bold"
-        />
-
-    <EditText
-        android:id="@+id/login_username"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="username"
-        android:textColor="#676363"
-        android:textSize="15dp"
-        android:background="@color/white"
-        />
-
-    <EditText
-        android:id="@+id/login_password"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="password"
-        android:textColor="#676363"
-        android:textSize="15dp"
-        android:background="@color/white"
-        />
-    <CheckBox
-        android:id="@+id/login_pass_Remember_chekbox"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="90dp"
-        android:background="@color/white"
-        />
-
-    <TextView
-        android:id="@+id/login_pass_Remember"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Remember my password"
-        android:textColor="#919090"
-        android:textSize="15dp"
-        />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/login_button"
@@ -71,16 +28,67 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:text="login"
-/>
+        android:onClick="button_clicked" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_round"
+        android:textColor="#676363"
+        android:textSize="15dp"
+        android:hint="  password" />
+
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edittext_round"
+        android:textColor="#676363"
+        android:textSize="15dp"
+        android:hint="  email" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/login_pass_Remember_chekbox"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@color/white"
+            android:layout_marginTop="3dp"
+
+            />
+
+        <TextView
+            android:id="@+id/login_pass_Remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember my password"
+            android:textColor="#919090"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/login_noAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="100dp"
         android:text="don’t have an Account ? sign up"
-        android:textColorLink="@color/purple_700"
+        android:onClick="signup_clicked"
+        android:textColor="@color/teal_700" />
 
 
 

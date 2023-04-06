@@ -6,24 +6,43 @@
     android:background="#BCBCBC"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".login">
+    tools:context=".MainActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:onClick="start_button"
+        android:text="get started" />
 
     <ImageView
-        android:id="@+id/logo_login"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/logo"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
+
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:onClick="text_clicked"
-        android:text="starter of the project"
+        android:text="Where you can print everything"
+        android:textColor="#A33434"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:onClick="text_clicked"
+        android:text="Cloud Printer"
         android:textColor="#A33434"
         android:textSize="30dp" />
 
