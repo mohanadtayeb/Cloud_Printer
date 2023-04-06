@@ -8,7 +8,16 @@
     android:padding="16dp"
     tools:context=".login">
 
-
+    <TextView
+        android:id="@+id/login_heder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:text="Login"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/login_email"
@@ -60,16 +69,7 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/login_heder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:text="Login"
-        android:textColor="#000000"
-        android:textSize="50dp"
-        android:textStyle="bold" />
+
 
     <Button
         android:id="@+id/login_button"
