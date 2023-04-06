@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "741078386034",
+    "firebase_url": "https://cloud-printer-c76ac-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "cloud-printer-c76ac",
+    "storage_bucket": "cloud-printer-c76ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741078386034:android:6124713296f051db2f89eb",
+        "android_client_info": {
+          "package_name": "com.example.cloudprinter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741078386034-ql4p7kecuehufb98hmmo84u4klv5c7va.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZUtCooFdHoVk4QDpP0xDB8bpxZ81_49M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741078386034-ql4p7kecuehufb98hmmo84u4klv5c7va.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
