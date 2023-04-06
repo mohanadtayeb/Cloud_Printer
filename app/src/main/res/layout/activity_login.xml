@@ -21,43 +21,44 @@
         android:textSize="50dp"
         android:textStyle="bold" />
 
+
     <Button
         android:id="@+id/login_button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="login"
-        android:onClick="button_clicked" />
-
-    <EditText
-        android:id="@+id/login_password"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/edittext_round"
-        android:textColor="#676363"
-        android:textSize="15dp"
-        android:hint="  password" />
+        android:onClick="button_clicked"
+        android:text="login" />
 
     <EditText
         android:id="@+id/login_email"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:background="@drawable/edittext_round"
         android:textColor="#676363"
-        android:textSize="15dp"
-        android:hint="  email" />
+        android:hint="  email"
+        android:textSize="15sp" />
 
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edittext_round"
+        android:textColor="#676363"
+        android:hint="  password"
+        android:textSize="15sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="15sp"
         android:orientation="horizontal">
 
         <CheckBox
@@ -75,7 +76,7 @@
             android:layout_height="wrap_content"
             android:text="Remember my password"
             android:textColor="#919090"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:layout_marginLeft="10dp" />
 
     </LinearLayout>

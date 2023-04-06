@@ -8,13 +8,7 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:onClick="start_button"
-        android:text="get started" />
+
 
     <ImageView
         android:layout_width="150dp"
@@ -45,5 +39,13 @@
         android:text="Cloud Printer"
         android:textColor="#A33434"
         android:textSize="30dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:onClick="start_button"
+        android:text="get started" />
 
 </LinearLayout>
