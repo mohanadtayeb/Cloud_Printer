@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/order_activity"
+    tools:context=".order">
+    <TextView
+        android:id="@+id/order_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Order Page"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/upload_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Upload Your File" />
+
+
+
+    <Spinner
+        android:id="@+id/bind_paper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/bind_paper"
+        android:layout_marginTop="30dp"
+        android:background="#99FFFFFF"
+        />
+    <Spinner
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/cover"
+        android:layout_marginTop="30dp"
+        android:background="#99FFFFFF"
+        />
+
+        <CheckBox
+            android:id="@+id/plastic_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add a plastic cover"
+            android:layout_marginTop="20dp"
+            />
+
+    <CheckBox
+        android:id="@+id/colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="colored papers"
+        android:layout_marginTop="5dp"
+        />
+    <EditText
+        android:id="@+id/copies"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="number of copies"
+        android:textColorHint="#88000000"
+        android:background="@drawable/edittext_round"
+        android:height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+
+        />
+    <TextView
+        android:id="@+id/total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Total: 0 SAR"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/printing_house_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="choose printing house" />
+
+
+
+    <Button
+        android:id="@+id/checkout_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:onClick="checkout_clicked"
+        android:backgroundTint="#00BC0A"
+        android:text="checkout" />
+
+
+
+
+
+
+
+</LinearLayout>

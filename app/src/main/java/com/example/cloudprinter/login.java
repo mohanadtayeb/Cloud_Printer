@@ -16,7 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class login extends AppCompatActivity {
-    Intent to_singup_activity;
+    Intent to_signup_activity,to_order_activity,to_orderHistory;
     FirebaseAuth mAuth;
 
     EditText password_editText, email_editText;
@@ -25,14 +25,16 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        to_singup_activity = new Intent(this, signup.class);
+        to_signup_activity = new Intent(this, signup.class);
+        to_order_activity = new Intent(this,order.class);
+        to_orderHistory = new Intent(this,orderHistory.class);
         mAuth = FirebaseAuth.getInstance();
         password_editText = findViewById(R.id.login_password);
         email_editText = findViewById(R.id.login_email);
     }
 
     public void signup_clicked(View view) {
-        startActivity(to_singup_activity);
+        startActivity(to_signup_activity);
     }
 
     public void button_clicked(View view) {
@@ -60,6 +62,8 @@ public class login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(login.this, "login successful", Toast.LENGTH_SHORT).show();
+                    to_order_activity.putExtra("email",email);
+                    startActivity(to_order_activity);
                 } else {
                     Toast.makeText(login.this, "email or password is not valid, please try again", Toast.LENGTH_SHORT).show();
                 }

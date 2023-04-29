@@ -28,6 +28,7 @@
         android:background="@drawable/edittext_round"
         android:textColor="#676363"
         android:hint="  email"
+        android:inputType="textEmailAddress"
         android:textSize="15sp" />
 
 
@@ -40,6 +41,7 @@
         android:background="@drawable/edittext_round"
         android:textColor="#676363"
         android:hint="  password"
+        android:inputType="textPassword"
         android:textSize="15sp" />
 
 

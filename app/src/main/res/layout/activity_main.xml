@@ -25,16 +25,20 @@
         android:layout_marginTop="30dp"
         android:onClick="text_clicked"
         android:text="Cloud Printer"
+        android:textStyle="bold"
+        android:background="#27FFFFFF"
         android:textColor="@color/black"
         android:textSize="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:onClick="text_clicked"
         android:text="Where you can print everything"
+        android:textStyle="bold"
+        android:background="#27FFFFFF"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
