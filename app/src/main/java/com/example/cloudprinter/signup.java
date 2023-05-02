@@ -1,5 +1,6 @@
 package com.example.cloudprinter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -12,36 +13,52 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class signup extends AppCompatActivity {
-    Button signup_button, location_button;
+    Button signup_button;
 
-    EditText email_editText, password_editText;
+    Intent to_login_activity;
+    EditText email_editText, password_editText,libName_editText;
     CheckBox owner_checkbox;
+
+    FirebaseDatabase mFirebaseDatabase;
+    DatabaseReference mDatabaseReference;
+
+    libLocation mLibLocation;
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        location_button = findViewById(R.id.location_button);
+        libName_editText = findViewById(R.id.lib_name_edittext);
         owner_checkbox = findViewById(R.id.owner_checkbox);
-        location_button.setVisibility(View.GONE);
+        libName_editText.setVisibility(View.GONE);
         email_editText = findViewById(R.id.sing_up_Email);
         password_editText = findViewById(R.id.sing_up_password);
         mAuth = FirebaseAuth.getInstance();
+        to_login_activity = new Intent(this,login.class);
+        mLibLocation = new libLocation();
+
+
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
 
 
     }
 
     public void owner_checkbox_clicked(View view) {
         if (owner_checkbox.isChecked()) {
-            location_button.setVisibility(View.VISIBLE);
+            libName_editText.setVisibility(View.VISIBLE);
         } else {
-            location_button.setVisibility(View.GONE);
+            libName_editText.setVisibility(View.GONE);
         }
     }
 
@@ -70,7 +87,12 @@ public class signup extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
+                    if (owner_checkbox.isChecked()) {
+                        addDataToFirebase(email);
+                    }
+
                     Toast.makeText(signup.this, "Registration successful", Toast.LENGTH_SHORT).show();
+                    startActivity(to_login_activity);
                 } else {
                     Toast.makeText(signup.this, "Registration failed, please try again later", Toast.LENGTH_SHORT).show();
                 }
@@ -80,4 +102,30 @@ public class signup extends AppCompatActivity {
 
     }
 
+
+    public void addDataToFirebase(String mEmail) {
+        GPSHelper gpsHelper = new GPSHelper(signup.this);
+        gpsHelper.getMyLocation();
+        Double lat = gpsHelper.getLatitude();
+        Double log = gpsHelper.getLongitude();
+        mLibLocation.setLatitude(lat.toString());
+        mLibLocation.setLongitude(log.toString());
+        mLibLocation.setEmail(mEmail);
+        mDatabaseReference = mFirebaseDatabase.getReference("lib_location").child(libName_editText.getText().toString());
+
+        mDatabaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                mDatabaseReference.setValue(mLibLocation);
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
 }

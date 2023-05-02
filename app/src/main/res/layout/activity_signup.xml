@@ -33,6 +33,7 @@
         android:inputType="textEmailAddress"
         android:textColor="#676363" />
 
+
     <EditText
         android:id="@+id/sing_up_password"
         android:layout_width="match_parent"
@@ -43,8 +44,6 @@
         android:hint="  password"
         android:inputType="textPassword"
         android:textColor="#676363" />
-
-
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -71,14 +70,14 @@
             android:textColor="#595959" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/location_button"
+    <EditText
+        android:id="@+id/lib_name_edittext"
         android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="select your house printing location"
         android:backgroundTint="@color/teal_200"
+        android:hint="please write your printing house name"
         android:textSize="11sp" />
 
     <Button
@@ -87,9 +86,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
-        android:onClick="signup_clicked"
         android:backgroundTint="@color/teal_200"
+        android:onClick="signup_clicked"
         android:text="Register" />
+
+
 
 
 </LinearLayout>

@@ -67,6 +67,16 @@ private String email;
 private String location;
 private String plastic_cover;
 
+    public String getLib_location() {
+        return lib_location;
+    }
+
+    public void setLib_location(String lib_location) {
+        this.lib_location = lib_location;
+    }
+
+    private String lib_location;
+
 
 
 }

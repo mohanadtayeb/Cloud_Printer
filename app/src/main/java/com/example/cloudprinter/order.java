@@ -1,10 +1,12 @@
 package com.example.cloudprinter;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,17 +19,23 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.internal.Storage;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class order extends AppCompatActivity {
 
     FirebaseDatabase mFirebaseDatabase;
 
     DatabaseReference mDatabaseReference;
+
+    FirebaseStorage storage;
+    StorageReference mStorageReference;
 
     orderInfo mOrderInfo;
 
@@ -42,6 +50,8 @@ public class order extends AppCompatActivity {
     LinearLayout order_activity;
 
     Intent to_order_history;
+
+    Uri pdfFile;
 
     public int total,before_total,total_copies;
 
@@ -60,6 +70,8 @@ public class order extends AppCompatActivity {
         colored = (CheckBox) findViewById(R.id.colored);
         total_price = (TextView) findViewById(R.id.total_price);
         order_activity = findViewById(R.id.order_activity);
+
+
 
         mOrderInfo = new orderInfo();
 
@@ -191,4 +203,29 @@ public class order extends AppCompatActivity {
         });
 
     }
+
+public void upload_clicked(View view) {
+openFileChooser();
+}
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+        if(requestCode == 1 && requestCode == RESULT_OK && data != null && data.getData() != null){
+        pdfFile = data.getData();
+
+
+
+
+        }
+    }
+
+    private void openFileChooser() {
+        Intent intent = new Intent();
+        intent.setType("pdf/*");
+        intent.setAction(intent.ACTION_GET_CONTENT);
+        startActivityForResult(intent, 1);
+}
 }

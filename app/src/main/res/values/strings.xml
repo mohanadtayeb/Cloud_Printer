@@ -1,13 +1,15 @@
 <resources>
     <string name="app_name">Cloud Printer</string>
 
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="title_activity_maps2">MapsActivity2</string>
     <string-array name="bind_paper">
         <item>none</item>
         <item>bind papers classic</item>
         <item>bind papers spiral</item>
         <item>bind papers metal spiral</item>
     </string-array>
-
     <string-array name="cover">
         <item>none</item>
         <item>black hard cover</item>
