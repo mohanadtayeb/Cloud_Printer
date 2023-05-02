@@ -9,7 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    Intent to_login_activity,to_googleMaps_activity;
+    Intent to_login_activity,to_googleMaps_activity,to_order_Activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         to_login_activity = new Intent(this, login.class);
         to_googleMaps_activity = new Intent(this,MapsActivity2.class);
+        to_order_Activity = new Intent(this,order.class);
 
     }
 
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void start_button(View view) {
-        startActivity(to_googleMaps_activity);
+        startActivity(to_login_activity);
     }
 
 }

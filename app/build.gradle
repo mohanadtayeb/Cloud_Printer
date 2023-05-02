@@ -46,8 +46,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.firebase:firebase-auth:21.2.0'
-    implementation 'com.google.firebase:firebase-database:20.1.0'
+    implementation 'com.google.firebase:firebase-auth:21.3.0'
+    implementation 'com.google.firebase:firebase-database:20.2.0'
     implementation 'jp.wasabeef:blurry:4.0.1'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
     implementation 'com.google.firebase:firebase-storage:20.1.0'
@@ -60,10 +60,10 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-database:8.0.2'
 
 // Dependency for Firebase REaltime Database
-    implementation 'com.google.firebase:firebase-database:19.3.1'
+    implementation 'com.google.firebase:firebase-database:20.2.0'
 
 // This dependency includes all material components of the android app.
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.material:material:1.8.0'
 }
 
 

@@ -12,6 +12,12 @@
         android:theme="@style/Theme.CloudPrinter"
         tools:targetApi="31">
         <activity
+            android:name=".MainUserPage"
+            android:exported="false" />
+        <activity
+            android:name=".TestingActivity"
+            android:exported="false" />
+        <activity
             android:name=".monitorActivity"
             android:exported="false" />
         <!--
@@ -66,11 +72,13 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAoqgUesn8SMjeX61-uJWqB_GbJtA7L7UU" />
     </application>
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission
         android:name="android.permission.ACCESS_FINE_LOCATION"
         tools:ignore="CoarseFineLocation" />
+
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
 </manifest>

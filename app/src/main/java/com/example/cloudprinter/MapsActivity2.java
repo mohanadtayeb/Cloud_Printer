@@ -19,6 +19,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Objects;
+
 public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback {
     libLocation mLibLocation;
     DatabaseReference refDatabase;
@@ -57,11 +59,10 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         refDatabase.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String prevChildKey) {
-                mLibLocation = new libLocation();
-                LatLng newLocation = new LatLng(
-                        Long.parseLong(dataSnapshot.child("latitude").getValue().toString()),
-                        Long.parseLong(dataSnapshot.child("longitude").getValue().toString())
-                );
+                double lat ;
+                double lot ;
+                LatLng newLocation = new LatLng(Double.parseDouble((dataSnapshot.child("latitude").getValue(String.class))),
+                        Double.parseDouble((dataSnapshot.child("longitude").getValue(String.class))));
                 mMap.addMarker(new MarkerOptions()
                         .position(newLocation)
                         .title(dataSnapshot.getKey()));
