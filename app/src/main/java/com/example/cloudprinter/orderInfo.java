@@ -67,6 +67,16 @@ private String email;
 private String location;
 private String plastic_cover;
 
+    public String getOrder_file_ref() {
+        return order_file_ref;
+    }
+
+    public void setOrder_file_ref(String order_file_ref) {
+        this.order_file_ref = order_file_ref;
+    }
+
+    private String order_file_ref;
+
     public String getLib_location() {
         return lib_location;
     }

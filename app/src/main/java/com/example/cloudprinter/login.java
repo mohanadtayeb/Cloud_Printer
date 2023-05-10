@@ -16,7 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class login extends AppCompatActivity {
-    Intent to_signup_activity,to_order_activity,to_orderHistory;
+  Intent to_signup_activity,to_order_activity,to_orderHistory,to_orderHistoryAdapter;
     FirebaseAuth mAuth;
 
     EditText password_editText, email_editText;
@@ -25,9 +25,10 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        to_signup_activity = new Intent(this, signup.class);
-        to_order_activity = new Intent(this,order.class);
-        to_orderHistory = new Intent(this,orderHistory.class);
+        to_signup_activity = new Intent(login.this, signup.class);
+        to_order_activity = new Intent(login.this,order.class);
+        to_orderHistory = new Intent(login.this,orderHistory.class);
+        to_orderHistoryAdapter = new Intent(login.this, orderHistoryAdapter.class);
         mAuth = FirebaseAuth.getInstance();
         password_editText = findViewById(R.id.login_password);
         email_editText = findViewById(R.id.login_email);
@@ -62,8 +63,10 @@ public class login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(login.this, "login successful", Toast.LENGTH_SHORT).show();
+                    to_orderHistoryAdapter.putExtra("email",email);
+                    to_orderHistory.putExtra("email",email);
                     to_order_activity.putExtra("email",email);
-                    startActivity(to_order_activity);
+                    startActivity(to_orderHistory);
                 } else {
                     Toast.makeText(login.this, "email or password is not valid, please try again", Toast.LENGTH_SHORT).show();
                 }

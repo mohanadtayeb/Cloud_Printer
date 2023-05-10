@@ -1,4 +1,5 @@
 package com.example.cloudprinter;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,13 +17,16 @@ class orderHistoryAdapter extends FirebaseRecyclerAdapter<orderInfo,orderHistory
 
     @Override
     protected void onBindViewHolder(@NonNull orderInfoViewHolder holder, int position, @NonNull orderInfo model) {
-        holder.bind_paper.setText(model.getBind_paper());
-        holder.colored.setText(model.getColored());
-        holder.copies.setText(model.getCopies());
-        holder.cover.setText(model.getCover());
-        holder.email.setText(model.getEmail());
-        holder.location.setText(model.getLocation());
-        holder.plastic_cover.setText(model.getPlastic_cover());
+
+            holder.bind_paper.setText(model.getBind_paper());
+            holder.colored.setText(model.getColored());
+            holder.copies.setText(model.getCopies());
+            holder.cover.setText(model.getCover());
+            holder.email.setText(model.getEmail());
+            holder.location.setText(model.getLocation());
+            holder.plastic_cover.setText(model.getPlastic_cover());
+
+
     }
 
     @NonNull

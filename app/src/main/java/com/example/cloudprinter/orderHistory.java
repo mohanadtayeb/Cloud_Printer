@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -46,7 +47,11 @@ DatabaseReference mDatabaseReference;
     @Override protected void onStart()
     {
         super.onStart();
+
         mAdapter.startListening();
+
+
+
     }
 
     // Function to tell the app to stop getting
@@ -55,5 +60,7 @@ DatabaseReference mDatabaseReference;
     {
         super.onStop();
         mAdapter.stopListening();
+
+
     }
 }

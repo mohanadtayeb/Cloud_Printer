@@ -25,7 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class signup extends AppCompatActivity {
     Button signup_button;
 
-    Intent to_login_activity;
+ Intent to_login_activity,to_order_activity;
     EditText email_editText, password_editText,libName_editText;
     CheckBox owner_checkbox;
 
@@ -46,6 +46,7 @@ public class signup extends AppCompatActivity {
         password_editText = findViewById(R.id.sing_up_password);
         mAuth = FirebaseAuth.getInstance();
         to_login_activity = new Intent(this,login.class);
+        to_order_activity = new Intent(signup.this,order.class);
         mLibLocation = new libLocation();
 
 
@@ -63,7 +64,6 @@ public class signup extends AppCompatActivity {
     }
 
     public void signup_clicked(View view) {
-
         register();
     }
 
@@ -111,7 +111,7 @@ public class signup extends AppCompatActivity {
         mLibLocation.setLatitude(lat.toString());
         mLibLocation.setLongitude(log.toString());
         mLibLocation.setEmail(mEmail);
-        mDatabaseReference = mFirebaseDatabase.getReference("lib_location").child(libName_editText.getText().toString());
+        mDatabaseReference = mFirebaseDatabase.getReference("lib_location").child(libName_editText.getText().toString().toLowerCase());
 
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
