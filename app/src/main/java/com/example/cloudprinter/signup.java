@@ -89,6 +89,8 @@ public class signup extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     if (owner_checkbox.isChecked()) {
                         addDataToFirebase(email);
+
+                        to_login_activity.putExtra("is_owner",true);
                     }
 
                     Toast.makeText(signup.this, "Registration successful", Toast.LENGTH_SHORT).show();
