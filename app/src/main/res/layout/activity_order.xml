@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
     android:orientation="vertical"
-    android:padding="16dp"
     android:id="@+id/order_activity"
     tools:context=".order">
     <TextView
@@ -26,10 +25,19 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:onClick="upload_clicked"
         android:backgroundTint="@color/teal_200"
         android:text="Upload Your File" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="only pdf supported"
+        android:layout_gravity="center"
+        android:textColor="#79FF0000"
+        android:shadowColor="@color/black"
+        android:shadowRadius="@integer/material_motion_duration_long_1"
+        />
 
 
 
@@ -141,6 +149,31 @@
         android:onClick="checkout_clicked"
         android:backgroundTint="#00BC0A"
         android:text="checkout" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relativelayout"
+            android:layout_marginBottom="65dp"
+            android:padding="5dp">
+
+        </RelativeLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_nav"
+            android:layout_alignParentBottom="true"
+
+            android:id="@+id/bottonnav"
+            >
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </RelativeLayout>
 
 
 

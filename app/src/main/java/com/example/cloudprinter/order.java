@@ -7,6 +7,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -22,6 +23,7 @@ import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -40,6 +42,7 @@ import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -57,7 +60,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class order extends AppCompatActivity {
+public class order extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     FirebaseDatabase mFirebaseDatabase;
     Button upload_button;
@@ -78,7 +81,7 @@ public class order extends AppCompatActivity {
 
     LinearLayout order_activity;
 
-    Intent to_order_history,intent;
+    Intent to_order_history,intent,to_home;
 
     Uri pdfFile,imageuri;
     ImageView upload;
@@ -88,6 +91,7 @@ public class order extends AppCompatActivity {
     PdfReader mPdfReader;
     ParcelFileDescriptor mParcelFileDescriptor;
 
+    BottomNavigationView mBottomNavigationView;
     private String order_file_ref;
 
 
@@ -113,6 +117,9 @@ public class order extends AppCompatActivity {
         order_activity = findViewById(R.id.order_activity);
         lib_spinner = findViewById(R.id.printing_house_spinner);
         upload_button = findViewById(R.id.upload_button);
+        mBottomNavigationView = findViewById(R.id.bottonnav);
+        mBottomNavigationView.setOnNavigationItemSelectedListener(this);
+        to_home = new Intent(this, MainUserPage.class);
         GPSHelper gpsHelper  = new GPSHelper(order.this);
         gpsHelper.getMyLocation();
 
@@ -270,15 +277,16 @@ public class order extends AppCompatActivity {
 
     }
 
-    public void addDataToFirebase(String mCopies,String mBind_paper,String mCover,String mPlasic_cover,String mColored,String mEmail,String mLocation,String mFileRef) {
+    public void addDataToFirebase(String mCopies,String mBind_paper,String mCover,String mPlastic_cover,String mColored,String mEmail,String mLocation,String mFileRef) {
         mOrderInfo.setColored(mColored);
         mOrderInfo.setBind_paper(mBind_paper);
         mOrderInfo.setCopies(mCopies);
         mOrderInfo.setCover(mCover);
-        mOrderInfo.setPlastic_cover(mPlasic_cover);
+        mOrderInfo.setPlastic_cover(mPlastic_cover);
         mOrderInfo.setEmail(mEmail);
         mOrderInfo.setLocation(mLocation);
         mOrderInfo.setOrder_file_ref(mFileRef);
+        mOrderInfo.setStatus("on progress");
 
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -452,6 +460,32 @@ openFileChooser();
         distance = Math.pow(distance, 2) + Math.pow(height, 2);
 
         return Math.sqrt(distance);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Fragment fragment = null;
+        switch (item.getItemId()) {
+            case R.id.order:
+
+                break;
+            case R.id.home:
+                startActivity(to_home);
+                finish();
+                break;
+            case R.id.order_history:
+                startActivity(to_order_history);
+                finish();
+                break;
+        }
+        if (fragment != null) {
+            loadFragment(fragment);
+        }
+        return true;
+    }
+    void loadFragment(Fragment fragment) {
+        //to attach fragment
+        getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout, fragment).commit();
     }
 
 }

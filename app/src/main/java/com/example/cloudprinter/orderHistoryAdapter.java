@@ -25,6 +25,7 @@ class orderHistoryAdapter extends FirebaseRecyclerAdapter<orderInfo,orderHistory
             holder.email.setText(model.getEmail());
             holder.location.setText(model.getLocation());
             holder.plastic_cover.setText(model.getPlastic_cover());
+            holder.status.setText(model.getStatus());
 
 
     }
@@ -39,7 +40,7 @@ class orderHistoryAdapter extends FirebaseRecyclerAdapter<orderInfo,orderHistory
     }
 
     class orderInfoViewHolder extends  RecyclerView.ViewHolder {
-        TextView bind_paper, colored, copies , cover , email , location , plastic_cover;
+        TextView bind_paper, colored, copies , cover , email , location , plastic_cover,status;
 
         public orderInfoViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -51,6 +52,7 @@ class orderHistoryAdapter extends FirebaseRecyclerAdapter<orderInfo,orderHistory
             email = itemView.findViewById(R.id.email);
             location = itemView.findViewById(R.id.location);
             plastic_cover = itemView.findViewById(R.id.plastic_cover);
+            status = itemView.findViewById(R.id.status);
         }
     }
 }

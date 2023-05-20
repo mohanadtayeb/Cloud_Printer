@@ -87,6 +87,16 @@ private String plastic_cover;
 
     private String lib_location;
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    private String status;
+
 
 
 }
